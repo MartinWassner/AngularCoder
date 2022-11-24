@@ -1,0 +1,29 @@
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto 90vh;
+    border: 1px solid black;
+}
+
+.top{
+    grid-column: 1 / 5;
+    border: 1px solid black;
+    background-color: pink;
+
+}
+
+.left-menu{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border: 1px solid black;
+    background-color: rgb(42, 128, 165);
+}
+
+.main{
+    grid-column: 2 / 5;
+    grid-row: 2/ 3;
+    border: 1px solid black;
+    background-color: greenyellow;
+}
+

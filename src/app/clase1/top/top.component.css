@@ -1,0 +1,17 @@
+.navbar-collapse{
+    justify-content: right;  
+
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+form{
+    display: flex;
+}
+nav{
+    align-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
