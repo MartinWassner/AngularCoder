@@ -1,0 +1,11 @@
+<div class="m-4">
+    <p>¿Querés recibir novedades y ofertas? Suscribite a nuestro newsletter (prometemos no llenarte de spam)</p>
+    <form [formGroup]="formularioPrincipal" (ngSubmit)="submit()">
+        Nombre: <input type="text" formControlName="nombre" required> <br> <br>
+        Correo: <input class="correoBox "type="email" formControlName="email" [ngClass]="formularioPrincipal.get('email')?.invalid && formularioPrincipal.get('email')?.dirty ? 'error' : ''"> 
+        <span *ngIf="formularioPrincipal.get('email')?.invalid && formularioPrincipal.get('email')?.dirty">Formato de email incorrecto</span> <br> <br>
+        <button type="submit" > Confirmar </button>
+    </form>
+
+
+</div>
