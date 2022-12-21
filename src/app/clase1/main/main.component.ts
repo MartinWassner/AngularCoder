@@ -22,7 +22,7 @@ export class MainComponent {
 
   displayedColumns = ['id', 'name', 'surname', 'isActive', 'edit', 'delete'];
 
-  constructor(private readonly dialogService: MatDialog) {}
+  constructor(public readonly dialogService: MatDialog) {}
 
   addStudent() {
     const dialog = this.dialogService.open(AddStudentModalComponent);
@@ -37,6 +37,19 @@ export class MainComponent {
 
   deleteStudent(student: Alumno){
     this.students = this.students.filter((stu)=> stu.id !== student.id)  }
+
+  editStudent(student: Alumno){
+    const dialog = this.dialogService.open(AddStudentModalComponent, {
+      data: student, 
+    });
+
+  dialog.afterClosed().subscribe((data) => {
+    if(data) {
+      this.students = this.students.map((stu) => stu.id === student.id ? {...stu, ...data} : stu) 
+    }
+  })
+
+  }
 }
 
 

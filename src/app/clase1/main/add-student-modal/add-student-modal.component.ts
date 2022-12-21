@@ -1,6 +1,8 @@
 import { DialogRef } from '@angular/cdk/dialog';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Alumno } from '../../../models/alumno.model';
 
 
 @Component({
@@ -16,7 +18,13 @@ export class AddStudentModalComponent {
     lastName: this.lastNameControl
   })
 
-  constructor(private readonly dialogRef: DialogRef) {}
+  constructor(private readonly dialogRef: DialogRef, @Inject(MAT_DIALOG_DATA) public data: Alumno | null,) {
+    console.log(data)
+    if (data) {
+      this.studentForm.patchValue(data)
+    }
+  }
+
 
   close(){
     this.dialogRef.close()
