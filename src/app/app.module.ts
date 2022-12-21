@@ -9,6 +9,9 @@ import { MidirectivaDirective } from './clase1/left-menu/midirectiva.directive';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './modulos/material/material.module';
+import { ModalComponent } from './clase1/modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +20,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LeftMenuComponent,
     MainComponent,
     MidirectivaDirective,
-    FormsComponent
+    FormsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

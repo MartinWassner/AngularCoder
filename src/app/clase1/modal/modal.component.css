@@ -1,0 +1,17 @@
+button {
+    margin-right: 8px;
+  }
+
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.login{
+    width: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
