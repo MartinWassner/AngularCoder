@@ -25,7 +25,15 @@ export class MainComponent {
   constructor(private readonly dialogService: MatDialog) {}
 
   addStudent() {
-    this.dialogService.open(AddStudentModalComponent)
+    const dialog = this.dialogService.open(AddStudentModalComponent);
+
+    dialog.afterClosed().subscribe((value)=>{
+      if (value){
+        const lastId = this.students[this.students.length - 1]?.id;
+        //this.students.push(new Alumno(lastId + 1, value.name, value.surname, true))
+        this.students = [...this.students, new Alumno(lastId + 1, value.firstName, value.lastName, true)];
+      }
+    })
   }
 }
 
