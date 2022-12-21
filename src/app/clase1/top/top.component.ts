@@ -9,16 +9,14 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class TopComponent {
 
-  constructor(public dialog: MatDialog) {
-    this.dialog.open(ModalComponent);
+  constructor(private readonly dialog: MatDialog) {
+
       
   }
 
-  ngOnInit(): void{
-    
-  };
+ 
 
-  openDialog(): void{
-
+  openDialog() {
+    this.dialog.open(ModalComponent);
   }
 }

@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Agregar alumno</h1>
+<div mat-dialog-component>
+    <form [formGroup]="studentForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Placeholder" [formControl]="firstNameControl">        
+        </mat-form-field> <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Placeholder" [formControl]="lastNameControl">        
+      </mat-form-field>
+    </form>
+</div>

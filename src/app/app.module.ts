@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modulos/material/material.module';
 import { ModalComponent } from './clase1/modal/modal.component';
+import { AddStudentModalComponent } from './clase1/main/add-student-modal/add-student-modal.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ModalComponent } from './clase1/modal/modal.component';
     MainComponent,
     MidirectivaDirective,
     FormsComponent,
-    ModalComponent
+    ModalComponent,
+    AddStudentModalComponent
   ],
   imports: [
     BrowserModule,
