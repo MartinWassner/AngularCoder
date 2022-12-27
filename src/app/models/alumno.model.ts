@@ -1,8 +1,8 @@
 export class Alumno {
     constructor(
        public id: number,
-       public name: string,
-       public surname: string,
+       public firstName: string,
+       public lastName: string,
        public isActive: boolean,
     ){}
 }

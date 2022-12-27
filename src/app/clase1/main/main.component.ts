@@ -20,7 +20,7 @@ export class MainComponent {
     new Alumno(5, 'Leandro', 'Paredes', true)
   ]
 
-  displayedColumns = ['id', 'name', 'surname', 'isActive', 'edit', 'delete'];
+  displayedColumns = ['id', 'firstName', 'lastName', 'isActive', 'edit', 'delete'];
 
   constructor(public readonly dialogService: MatDialog) {}
 
