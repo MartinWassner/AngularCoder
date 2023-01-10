@@ -19,6 +19,7 @@ import { LayoutsModule } from "./layouts/layouts.module";
     declarations: [
         AppComponent,
         AddStudentModalComponent,
+        
     ],
     providers: [],
     bootstrap: [AppComponent],

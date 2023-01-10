@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainComponent } from '../pages/main/main.component';
+//import { MainComponent } from '../pages/main/main.component';
 import { MaterialModule } from '../modulos/material/material.module';
 
 
